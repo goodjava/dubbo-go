@@ -14,12 +14,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package logger
 
 import (
 	"io/ioutil"
-	"log"
+	//"log"
 	"os"
 	"path"
 )
@@ -63,7 +62,7 @@ func init() {
 	logConfFile := os.Getenv(constant.APP_LOG_CONF_FILE)
 	err := InitLog(logConfFile)
 	if err != nil {
-		log.Printf("[InitLog] warn: %v", err)
+		//log.Printf("[InitLog] warn: %v", err)
 	}
 }
 

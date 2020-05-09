@@ -57,12 +57,12 @@ func init() {
 	confRouterFile = os.Getenv(constant.CONF_ROUTER_FILE_PATH)
 
 	if errCon := ConsumerInit(confConFile); errCon != nil {
-		log.Printf("[consumerInit] %#v", errCon)
+		//log.Printf("[consumerInit] %#v", errCon)
 		consumerConfig = nil
 	}
 
 	if errPro := ProviderInit(confProFile); errPro != nil {
-		log.Printf("[providerInit] %#v", errPro)
+		//log.Printf("[providerInit] %#v", errPro)
 		providerConfig = nil
 	}
 }
@@ -240,7 +240,7 @@ func GetApplicationConfig() *ApplicationConfig {
 // if not found, create new one
 func GetProviderConfig() ProviderConfig {
 	if providerConfig == nil {
-		logger.Warnf("providerConfig is nil!")
+		//logger.Warnf("providerConfig is nil!")
 		return ProviderConfig{}
 	}
 	return *providerConfig
@@ -250,7 +250,7 @@ func GetProviderConfig() ProviderConfig {
 // if not found, create new one
 func GetConsumerConfig() ConsumerConfig {
 	if consumerConfig == nil {
-		logger.Warnf("consumerConfig is nil!")
+		//logger.Warnf("consumerConfig is nil!")
 		return ConsumerConfig{}
 	}
 	return *consumerConfig
